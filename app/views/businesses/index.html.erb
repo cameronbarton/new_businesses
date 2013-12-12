@@ -1,0 +1,7 @@
+<h1><%= pluralize(@businesses.count, 'Business') %></h1>
+
+<ul>
+  <% @businesses.each do |b| %>
+  <li><%= b %></li>
+  <% end %>
+</ul>
