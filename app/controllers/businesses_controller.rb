@@ -1,5 +1,5 @@
 class BusinessesController < ApplicationController
   def index
-    @businesses = ["Blue Daffodil Flowers", "Sweet & Swanky Cakes", "Kimberly Kay Photography"]
+    @businesses = Business.all
   end
 end

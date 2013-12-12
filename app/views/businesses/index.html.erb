@@ -1,7 +1,15 @@
 <h1><%= pluralize(@businesses.count, 'Business') %></h1>
 
-<ul>
-  <% @businesses.each do |b| %>
-  <li><%= b %></li>
-  <% end %>
-</ul>
+<% @businesses.each do |business| %>
+  <article>
+    <header>
+      <h2><%= business.title %></h2>
+    </header>
+    <p>
+      <%= truncate(business.description, length: 40, separator: ' ') %>
+    </p>
+    <p>
+      <%= business.website %>
+    </p>
+  </article>
+<% end %>
