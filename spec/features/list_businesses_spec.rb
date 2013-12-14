@@ -3,9 +3,7 @@ require 'spec_helper'
 describe "Viewing the list of businesses" do
 
   it "shows the businesses" do
-    business1 = Business.create(title: "Blue Daffodil Flowers",
-                      website: "http://bluedaffodilflowers.com",
-                      description: "")
+    business1 = Business.create(business_attributes)
 
     business2 = Business.create(title: "Sweet & Swanky Cakes",
                       website: "http://sweetandswankycakes.com",

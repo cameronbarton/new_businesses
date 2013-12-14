@@ -3,7 +3,7 @@
 <% @businesses.each do |business| %>
   <article>
     <header>
-      <h2><%= business.title %></h2>
+      <h2><%= link_to business.title, business_path(business) %></h2>
     </header>
     <p>
       <%= truncate(business.description, length: 40, separator: ' ') %>
