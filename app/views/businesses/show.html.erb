@@ -8,6 +8,11 @@
   <p>
     <%= @business.website %>
   </p>
+  <p>
+    <%= @business.years_in_business %>
+    ( <%= time_ago_in_words(@business.years_in_business) %> ago )
+    <%= show_rank(@business) %>
+  </p>
 </article>
 
 <%= link_to "All Businesses", businesses_path %>
