@@ -6,13 +6,13 @@
     <%= @business.description %>
   </p>
   <p>
-    <%= @business.website %>
+    <%= link_to @business.website, @business.website %>
   </p>
   <p>
-    <%= @business.years_in_business %>
+    Started <%= @business.years_in_business %>
     ( <%= time_ago_in_words(@business.years_in_business) %> ago )
     <%= show_rank(@business) %>
   </p>
 </article>
 
-<%= link_to "All Businesses", businesses_path %>
+<%= link_to "All Businesses", businesses_path %> | <%= link_to "Edit", edit_business_path %>
