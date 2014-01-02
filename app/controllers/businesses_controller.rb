@@ -27,6 +27,12 @@ class BusinessesController < ApplicationController
     redirect_to @business
   end
 
+  def destroy
+    @business = Business.find(params[:id])
+    @business.destroy
+    redirect_to businesses_url
+  end
+
 private
 
   def business_params
