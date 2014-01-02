@@ -1,0 +1,22 @@
+<%= form_for(@business) do |f| %>
+  <p>
+    <%= f.label :title %><br/>
+    <%= f.text_field :title, autofocus: true %>
+  </p>
+  <p>
+    <%= f.label :description %><br/>
+    <%= f.text_area :description, cols: 40, rows: 7 %>
+  </p>
+  <p>
+    <%= f.label :website %><br/>
+    <%= f.text_field :website %>
+  </p>
+  <p>
+    <%= f.label :years_in_business, "Years In Business" %><br/>
+    <%= f.date_select :years_in_business %>
+  </p>
+  <p>
+    <%= f.submit %> |
+    <%= link_to "Cancel", businesses_path %>
+  </p>
+<% end %>

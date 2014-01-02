@@ -1,16 +1,18 @@
 <h1><%= pluralize(@businesses.count, 'Business') %></h1>
 
+<%= link_to "Add New Business", new_business_url %>
+
 <% @businesses.each do |business| %>
   <article>
     <header>
       <h2><%= link_to business.title, business_path(business) %></h2>
     </header>
     <p>
-      <%= truncate(business.description, length: 40, separator: ' ') %>
+      <%= truncate(business.description, length: 120, separator: ' ') %>
     </p>
     <p>
-      Started <%= business.years_in_business %>
-      ( <%= time_ago_in_words(business.years_in_business) %> ago )
+      Started <%= business.years_in_business %> |
+      ( <%= time_ago_in_words(business.years_in_business) %> ago ) |
       <%= show_rank(business) %>
     </p>
   </article>
