@@ -1,6 +1,6 @@
 class BusinessesController < ApplicationController
   def index
-    @businesses = Business.all
+    @businesses = Business.started
   end
 
   def show
