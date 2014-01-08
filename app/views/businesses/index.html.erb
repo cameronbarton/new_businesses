@@ -1,13 +1,11 @@
 <h1><%= pluralize(@businesses.count, 'Business') %></h1>
 
 <% @businesses.each do |business| %>
-  <article>
+  <article id="business">
     <header>
+      <%= image_for(business) %>
       <h2><%= link_to business.title, business_path(business) %></h2>
     </header>
-    <p>
-      <%= image_for(business) %>
-    </p>
     <p>
       <%= truncate(business.description, length: 120, separator: ' ') %>
     </p>
