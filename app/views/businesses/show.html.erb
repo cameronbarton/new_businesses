@@ -3,7 +3,13 @@
     <h1><%= @business.title %></h1>
   </header>
   <p>
+    <%= image_for(@business) %>
+  </p>
+  <p>
     <%= @business.description %>
+  </p>
+  <p>
+    <%= @business.contact_email %>
   </p>
   <p>
     <%= link_to @business.website, @business.website %>

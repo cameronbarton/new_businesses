@@ -16,6 +16,14 @@
     <%= f.date_select :years_in_business %>
   </p>
   <p>
+    <%= f.label :contact_email %><br/>
+    <%= f.text_field :contact_email %>
+  </p>
+  <p>
+    <%= f.label :logo %><br/>
+    <%= f.text_field :logo %>
+  </p>
+  <p>
     <%= f.submit %> |
     <%= link_to "Cancel", businesses_path %>
   </p>

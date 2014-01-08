@@ -14,6 +14,8 @@ describe "Creating a new business" do
     fill_in 'Title', with: "New Business Title"
     fill_in 'Website', with: "http://example.com"
     fill_in 'Description', with: "New Business Description"
+    fill_in 'Contact Email', with: "contact@contact.com"
+    fill_in 'Logo', with: "logo.png"
 
     click_button 'Create Business'
 

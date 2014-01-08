@@ -10,6 +10,8 @@ describe "Viewing a business" do
     expect(page).to have_text(business.title)
     expect(page).to have_text(business.website)
     expect(page).to have_text(business.description)
+    expect(page).to have_text(business.contact_email)
+    expect(page).to have_selector("img[src$='#{business.logo}']")
   end
 
   it "shows 'Veteran!' if the business is older than 2 years" do
@@ -21,7 +23,7 @@ describe "Viewing a business" do
   end
 
   it "shows 'Rookie!' if the business is newer than 2 years" do
-    business = Business.create(business_attributes(years_in_business: "2012-12-1"))
+    business = Business.create(business_attributes(years_in_business: "2013-12-1"))
 
     visit business_url(business)
 

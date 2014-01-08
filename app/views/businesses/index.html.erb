@@ -8,6 +8,9 @@
       <h2><%= link_to business.title, business_path(business) %></h2>
     </header>
     <p>
+      <%= image_for(business) %>
+    </p>
+    <p>
       <%= truncate(business.description, length: 120, separator: ' ') %>
     </p>
     <p>
