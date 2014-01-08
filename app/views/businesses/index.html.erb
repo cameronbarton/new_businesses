@@ -1,7 +1,5 @@
 <h1><%= pluralize(@businesses.count, 'Business') %></h1>
 
-<%= link_to "Add New Business", new_business_url %>
-
 <% @businesses.each do |business| %>
   <article>
     <header>
